@@ -1,5 +1,3 @@
-let s:Process = vital#fern#import('Async.Promise.Process')
-
 function! fern#scheme#file#mapping#search#init(disable_default_mappings) abort
   nnoremap <buffer><silent> <Plug>(fern-action-search-search) :<C-u>call <SID>call('search')<CR>
   nnoremap <buffer><silent> <Plug>(fern-action-search-replace) :<C-u>call <SID>call('replace')<CR>

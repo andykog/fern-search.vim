@@ -1,5 +1,3 @@
-let s:Process = vital#fern#import('Async.Promise.Process')
-
 let g:FernBookmarksFile = get(g:, 'FernBookmarksFile', expand('$HOME') . '/.FernBookmarks')
 let s:Bookmark = {}
 let g:FernBookmark = s:Bookmark
