@@ -37,6 +37,7 @@ function! s:map_bookmarks(helper) abort
   let l:selectedBookmark = s:Bookmark.Bookmarks()[l:seletedIdx]
   let l:path = l:selectedBookmark.path
 
+  execute 'cd' fnameescape(l:path)
   execute "Fern" l:path
 endfunction
 
