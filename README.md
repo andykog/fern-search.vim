@@ -12,9 +12,9 @@ Uses ack.vim to search/replace
 
 ## Usage
 
-| Mapping | Action                | Description                         |
-| ------- | --------------------- | ----------------------------------- |
-| `ms`    | `search`              | Search                              |
-| `mr`    | `replace`             | Replace                             |
-| `mS`    | `search-insensetive`  | Search (case sensetive)             |
-| `mR`    | `replace-insensetive` | Replace (case sensetive)            |
+| Mapping | Action              | Description                         |
+| ------- | --------------------| ----------------------------------- |
+| `ms`    | `search`            | Search                              |
+| `mr`    | `replace`           | Replace                             |
+| `mS`    | `search-sensetive`  | Search (case sensetive)             |
+| `mR`    | `replace-sensetive` | Replace (case sensetive)            |

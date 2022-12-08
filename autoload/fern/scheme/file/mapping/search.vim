@@ -3,15 +3,15 @@ let s:Process = vital#fern#import('Async.Promise.Process')
 function! fern#scheme#file#mapping#search#init(disable_default_mappings) abort
   nnoremap <buffer><silent> <Plug>(fern-action-search-search) :<C-u>call <SID>call('search')<CR>
   nnoremap <buffer><silent> <Plug>(fern-action-search-replace) :<C-u>call <SID>call('replace')<CR>
-  nnoremap <buffer><silent> <Plug>(fern-action-search-search-insensetive) :<C-u>call <SID>call('searchi')<CR>
-  nnoremap <buffer><silent> <Plug>(fern-action-search-replace-insensetive) :<C-u>call <SID>call('replacei')<CR>
+  nnoremap <buffer><silent> <Plug>(fern-action-search-search-sensetive) :<C-u>call <SID>call('searchs')<CR>
+  nnoremap <buffer><silent> <Plug>(fern-action-search-replace-sensetive) :<C-u>call <SID>call('replaces')<CR>
 
   if !a:disable_default_mappings
         \ && !g:fern#scheme#file#mapping#search#disable_default_mappings
     nmap <buffer><nowait> ms <Plug>(fern-action-search-search)
     nmap <buffer><nowait> mr <Plug>(fern-action-search-replace)
-    nmap <buffer><nowait> mS <Plug>(fern-action-search-search-insensetive)
-    nmap <buffer><nowait> mR <Plug>(fern-action-search-replace-insensetive)
+    nmap <buffer><nowait> mS <Plug>(fern-action-search-search-sensetive)
+    nmap <buffer><nowait> mR <Plug>(fern-action-search-replace-sensetive)
   endif
 endfunction
 
@@ -44,7 +44,7 @@ function! s:map_replace(helper) abort
   call fern#scheme#file#mapping#search#Replace(1, cd)
 endfunction
 
-function! s:map_searchi(helper) abort
+function! s:map_searchs(helper) abort
   if a:helper.sync.get_scheme() !=# 'file'
     throw printf("search-search action requires 'file' scheme")
   endif
@@ -55,7 +55,7 @@ function! s:map_searchi(helper) abort
   call fern#scheme#file#mapping#search#Search(0, cd)
 endfunction
 
-function! s:map_replacei(helper) abort
+function! s:map_replaces(helper) abort
   if a:helper.sync.get_scheme() !=# 'file'
     throw printf("search-replace action requires 'file' scheme")
   endif
