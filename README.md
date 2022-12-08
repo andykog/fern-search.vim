@@ -12,7 +12,7 @@ Uses ack.vim to search/replace
 
 ## Usage
 
-| Mapping     | Action        | Description                         |
-| ----------- | ------------- | ----------------------------------- |
-| `<leader>s` | `search`      | Search                              |
-| `<leader>r` | `replace`     | Replace                             |
+| Mapping | Action        | Description                         |
+| ------- | ------------- | ----------------------------------- |
+| `ms`    | `search`      | Search                              |
+| `mr`    | `replace`     | Replace                             |

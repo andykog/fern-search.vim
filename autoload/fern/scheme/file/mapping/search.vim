@@ -6,8 +6,8 @@ function! fern#scheme#file#mapping#search#init(disable_default_mappings) abort
 
   if !a:disable_default_mappings
         \ && !g:fern#scheme#file#mapping#search#disable_default_mappings
-    nmap <buffer><nowait> <leader>s <Plug>(fern-action-search-search)
-    nmap <buffer><nowait> <leader>r <Plug>(fern-action-search-replace)
+    nmap <buffer><nowait> ms <Plug>(fern-action-search-search)
+    nmap <buffer><nowait> mr <Plug>(fern-action-search-replace)
   endif
 endfunction
 
