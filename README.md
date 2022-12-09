@@ -2,19 +2,14 @@
 
 [![fern plugin](https://img.shields.io/badge/🌿%20fern-plugin-yellowgreen)](https://github.com/lambdalisue/fern.vim)
 
-[fern.vim](https://github.com/lambdalisue/fern.vim) plugin which add search/replace on `file://` scheme.
+[fern.vim](https://github.com/lambdalisue/fern.vim) plugin to make full-text search/replace in
+selected folder. Requires [Ack.vim](https://github.com/mileszs/ack.vim/)
 
-Requires [Ack.vim](https://github.com/mileszs/ack.vim/)
+## Usage (default mapping)
 
-**EXPERIMENTAL, UNDER DEVELOPMENT**
-
-Uses ack.vim to search/replace
-
-## Usage
-
-| Mapping | Action              | Description                         |
-| ------- | --------------------| ----------------------------------- |
-| `ms`    | `search`            | Search                              |
-| `mr`    | `replace`           | Replace                             |
-| `mS`    | `search-sensetive`  | Search (case sensetive)             |
-| `mR`    | `replace-sensetive` | Replace (case sensetive)            |
+| Mapping | Action                    | Description                         |
+| ------- | ------------------------- | ----------------------------------- |
+| `ms`    | `search`                  | Search                              |
+| `mS`    | `search-sensetive`        | Search (case sensetive)             |
+| `mr`    | `search-replace`          | Replace                             |
+| `mR`    | `search-replace-sensetive`| Replace (case sensetive)            |

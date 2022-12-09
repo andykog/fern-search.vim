@@ -1,14 +1,14 @@
 function! fern#scheme#file#mapping#search#init(disable_default_mappings) abort
-  nnoremap <buffer><silent> <Plug>(fern-action-search-search) :<C-u>call <SID>call('search')<CR>
+  nnoremap <buffer><silent> <Plug>(fern-action-search) :<C-u>call <SID>call('search')<CR>
   nnoremap <buffer><silent> <Plug>(fern-action-search-replace) :<C-u>call <SID>call('replace')<CR>
-  nnoremap <buffer><silent> <Plug>(fern-action-search-search-sensetive) :<C-u>call <SID>call('searchs')<CR>
+  nnoremap <buffer><silent> <Plug>(fern-action-search-sensetive) :<C-u>call <SID>call('searchs')<CR>
   nnoremap <buffer><silent> <Plug>(fern-action-search-replace-sensetive) :<C-u>call <SID>call('replaces')<CR>
 
   if !a:disable_default_mappings
         \ && !g:fern#scheme#file#mapping#search#disable_default_mappings
-    nmap <buffer><nowait> ms <Plug>(fern-action-search-search)
+    nmap <buffer><nowait> ms <Plug>(fern-action-search)
     nmap <buffer><nowait> mr <Plug>(fern-action-search-replace)
-    nmap <buffer><nowait> mS <Plug>(fern-action-search-search-sensetive)
+    nmap <buffer><nowait> mS <Plug>(fern-action-search-sensetive)
     nmap <buffer><nowait> mR <Plug>(fern-action-search-replace-sensetive)
   endif
 endfunction
