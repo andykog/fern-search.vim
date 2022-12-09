@@ -1,3 +1,5 @@
+let g:fern#scheme#file#mapping#search#disable_default_mappings = get(g:, 'fern#scheme#file#mapping#fern#scheme#file#mapping#search#disable_default_mappings', 0)
+
 function! fern#scheme#file#mapping#search#init(disable_default_mappings) abort
   nnoremap <buffer><silent> <Plug>(fern-action-search) :<C-u>call <SID>call('search')<CR>
   nnoremap <buffer><silent> <Plug>(fern-action-search-replace) :<C-u>call <SID>call('replace')<CR>
@@ -63,9 +65,6 @@ function! s:map_replaces(helper) abort
   endif
   call fern#scheme#file#mapping#search#Replace(0, cd)
 endfunction
-
-
-let g:fern#scheme#file#mapping#search#disable_default_mappings = get(g:, 'fern#scheme#file#mapping#fern#scheme#file#mapping#search#disable_default_mappings', 0)
 
 function! fern#scheme#file#mapping#search#doReplace(caseInsensetive, cd)
   let pattern = fern#scheme#file#mapping#search#Search(a:caseInsensetive, a:cd)
