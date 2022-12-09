@@ -12,7 +12,6 @@ endfunction
 
 function! s:handleBufEnter() abort
   let path = expand('%:p')
-  echo path
   if path[0:6] ==# 'fern://'
     let g:fernHighlightHelper = fern#helper#new()
   elseif exists("g:fernHighlightHelper")
