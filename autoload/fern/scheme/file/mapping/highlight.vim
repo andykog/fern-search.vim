@@ -1,7 +1,3 @@
-function! fern#scheme#file#mapping#highlight#init(disable_default_mappings) abort
-  let g:fernHighlightHelper = fern#helper#new()
-endfunction
-
 function! s:focus(helper, key) abort
   if len(a:key) < 1
     return
@@ -14,9 +10,12 @@ function! s:focus(helper, key) abort
   call a:helper.sync.focus_node(a:key)
 endfunction
 
-function! s:highlight() abort
-  if exists("g:fernHighlightHelper")
-    let path = expand('%:p')
+function! s:handleBufEnter() abort
+  let path = expand('%:p')
+  echo path
+  if path[0:6] ==# 'fern://'
+    let g:fernHighlightHelper = fern#helper#new()
+  elseif exists("g:fernHighlightHelper")
     let root = g:fernHighlightHelper.sync.get_root_node()._path
     if path[0:len(root)-1] ==# root
       let path = substitute(path, root, '', '')
@@ -25,4 +24,4 @@ function! s:highlight() abort
   endif
 endfunction
 
-autocmd BufEnter * call s:highlight()
+autocmd BufEnter * call s:handleBufEnter()
