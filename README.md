@@ -2,8 +2,7 @@
 
 [![fern plugin](https://img.shields.io/badge/🌿%20fern-plugin-yellowgreen)](https://github.com/lambdalisue/fern.vim)
 
-[fern.vim](https://github.com/lambdalisue/fern.vim) plugin to make full-text search/replace in
-selected folder. Requires [Ack.vim](https://github.com/mileszs/ack.vim/)
+[fern.vim](https://github.com/lambdalisue/fern.vim) plugin for full-text search/replacement in the selected folder. Requires [Ack.vim](https://github.com/mileszs/ack.vim/)
 
 ## Usage (default mapping)
 
