@@ -4,6 +4,8 @@
 
 [fern.vim](https://github.com/lambdalisue/fern.vim) plugin for full-text search/replacement in the selected folder. Requires [Ack.vim](https://github.com/mileszs/ack.vim/)
 
+![search](search.gif)
+
 ## Usage (default mapping)
 
 | Mapping | Action                    | Description                         |
